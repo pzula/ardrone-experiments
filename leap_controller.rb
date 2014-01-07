@@ -138,12 +138,10 @@ end
 def landing
   # @ready = false
   puts "landing"
-  unless drone.nil?
-    drone.hover
-    sleep 1
+
     drone.land
     drone.stop
-  end
+
   # @ready = true
 end
 
