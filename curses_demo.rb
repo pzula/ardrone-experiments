@@ -18,17 +18,17 @@ loop do
   when Curses::Key::RIGHT
     Curses.setpos(0,0)
     Curses.addstr("RIGHT")
-  when Curses::Key::KEY_W
+  when 'w'
     Curses.setpos(0,0)
-    Curses.addstr("UP")
-  when Curses::Key::A
+    Curses.addstr("W")
+  when 'a'
     Curses.setpos(0,0)
-    Curses.addstr("DOWN")
-  when Curses::Key::S
+    Curses.addstr("A")
+  when 's'
     Curses.setpos(0,0)
-    Curses.addstr("LEFT")
-  when Curses::Key::D
+    Curses.addstr("S")
+  when 'd'
     Curses.setpos(0,0)
-    Curses.addstr("RIGHT")
+    Curses.addstr("D")
   end
 end

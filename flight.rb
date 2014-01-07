@@ -38,14 +38,13 @@ while
       drone.land
       drone.stop
       break
-    end
-#    when /\d/
-      #amount = command
-    #else
-      #begin
-        #drone.send(command,amount = 1)
-      #rescue => e
-        #p e
-      #end
-#    end
+   when /\d/
+      amount = command
+   else
+      begin
+        drone.send(command,amount = 1)
+      rescue => e
+        p e
+      end
+   end
 end
