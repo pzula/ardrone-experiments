@@ -8,7 +8,6 @@ connection :ardrone, :adaptor => :ardrone
 device :drone, :driver => :ardrone, :connection => :ardrone
 
 work do
-
   on leapmotion, :open => :on_open
   on leapmotion, :frame => :on_frame
   on leapmotion, :close => :on_close
@@ -18,10 +17,12 @@ def on_open(*args)
   puts args
 end
 
-
+def ready?
+  @ready ||= true
+end
 
 def on_frame(*args)
-  # return if not_ready
+  #return if !ready?
   frame = args[1]
   # #puts frame
   # frame.hands.each do |hand|
@@ -37,9 +38,9 @@ def on_frame(*args)
     landing if lowered?(hand)
     steady if hover?(hand)
   # end
-  pause_work
-  sleep 2
-  continue_work
+  #pause_work
+  #sleep 2
+  #continue_work
   #puts frame.gestures
   #sleep 3
   #puts frame.pointables
@@ -95,9 +96,11 @@ def right?(hand)
 end
 
 def steady
+  @ready = false
   drone.start
   drone.take_off
   drone.hover
+  @ready = true
 end
 
 def fly_forward
@@ -125,12 +128,15 @@ def roll_left
 end
 
 def lift_off
+  # @ready = false
   puts 'we have lift off!'
   drone.start
   drone.take_off
+  # @ready = true
 end
 
 def landing
+  # @ready = false
   puts "landing"
   unless drone.nil?
     drone.hover
@@ -138,6 +144,7 @@ def landing
     drone.land
     drone.stop
   end
+  # @ready = true
 end
 
 
