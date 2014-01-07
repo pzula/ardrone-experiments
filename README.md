@@ -11,7 +11,7 @@ FORWARD:
 
 BACKWARD:
   x:
-  y: >130, 150
+  y: -130, 150
   z:
 
 LEFT:
