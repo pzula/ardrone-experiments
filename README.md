@@ -1,5 +1,7 @@
 ## Flying an Ardrone with Ruby and Leapmotion
 ### Precompiler Hack Day at Codemash 2014
+*use at your own risk
+
 
 ### General Usage
 Use your `WASD` keys or a [Leapmotion Controller](http://leapmotion.com) to control an [Ardrone Parrot](http://ardrone2.parrot.com)
