@@ -1,3 +1,10 @@
+### Control an Ardrone with Ruby (and LeapMotion*)
+
+*use at your own risk
+
+Hacked on during Flying Robot Hack Day at CodeMash 2014
+
+----------------------------------
 
 HOVER:
   x: -10, 10
