@@ -1,3 +1,11 @@
+## Flying an Ardrone with Ruby and Leapmotion
+### Precompiler Hack Day at Codemash 2014
+
+### General Usage
+Use your `WASD` keys or a [Leapmotion Controller](http://leapmotion.com) to control an [Ardrone Parrot](http://ardrone2.parrot.com)
+
+
+#### Points of reference for the LeapMotion
 
 HOVER:
   x: -10, 10
@@ -32,4 +40,5 @@ TAKE_OFF / UP:
 LAND / DOWN:
   x:
   y:
-  z:65, <145
+ 
+ z:65, <145
